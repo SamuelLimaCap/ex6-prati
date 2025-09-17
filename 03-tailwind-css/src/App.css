@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  @apply text-[white];
+  --navbar-color: #242d35;
+  --focus-color: #da7f42;
+  --text-color: white;
+  --bg-color: #242424;
+  --card-focus-color: darkgrey;
+  --success-color-btn: darkcyan;
+  --tag-color: rgb(280, 140, 255);
+  --navbar-text-color: rgb(280, 140, 255);
+}
+#root:has(> div.theme-light) {
+  @apply bg-[#f2f2f2] text-[black];
+  --navbar-color: #da7f42;
+  --focus-color: #422d35;
+  --text-color: black;
+  --bg-color: #f2f2f2 !important;
+  --card-focus-color: #dfae8c;
+  --success-color-btn: green;
+  --navbar-text-color: white;
+  --tag-color: #da7f42;
+}
+.content {
+  @apply pt-[100px];
+}
+
+@media (prefers-reduced-motion: no-preference) {
+}

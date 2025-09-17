@@ -1,0 +1,67 @@
+.card {
+  padding: 2px;
+  transition: transform 150ms;
+  border-radius: 20px;
+  padding: 20px;
+  transition: all 150ms;
+}
+
+.card:hover {
+  background-color: var(--card-focus-color);
+  transform: translateY(-10px);
+}
+.card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.tags {
+  text-align: center;
+}
+
+.tags > span {
+  margin: 0 4px;
+  border: 1px solid var(--tag-color);
+  color: var(--tag-color);
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.card:hover .tags > span {
+  border: 1px solid var(--navbar-color);
+  color: var(--navbar-color);
+}
+
+.card-desc {
+  padding-left: 20px;
+}
+
+.card-desc > * {
+  padding-top: 0.4rem;
+}
+
+.card-buttons > .add-btn {
+  width: 100%;
+  padding: 4px 0px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.card-buttons > .add-btn[btn-style="outline"] {
+  background-color: transparent;
+  color: var(--success-color-btn);
+  border-color: var(--success-color-btn);
+}
+.card-buttons > .add-btn[btn-style="solid"] {
+  background-color: var(--success-color-btn);
+  border-color: var(--success-color-btn);
+}
+.card-buttons > .add-btn[btn-style="disabled"] {
+  background-color: dimgray;
+  color: lightcyan;
+  border-color: transparent;
+  cursor: not-allowed;
+}

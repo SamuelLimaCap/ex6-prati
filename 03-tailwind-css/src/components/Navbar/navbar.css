@@ -1,0 +1,73 @@
+@import "tailwindcss";
+header {
+  background: var(--navbar-color);
+  --nav-focus-color: "";
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.navbar-icon {
+  width: 80px;
+  height: 80px;
+}
+#root:has(> div.theme-light) header > .navbar-icon {
+  @apply bg-[url("./../../assets/sh-icon-light.jpeg")] w-[300px] bg-no-repeat bg-contain;
+}
+nav li::after {
+  background: var(--focus-color);
+}
+nav li:hover::after {
+  background: var(--focus-color);
+}
+nav > li:has(a:hover):hover,
+nav > li:hover {
+  @apply bg-[color:var(--focus-color)];
+}
+nav > .container--toggle {
+  @apply items-center m-[9px];
+}
+.cart {
+  @apply fill-[var(--navbar-text-color)] w-[070px] h-[22px];
+}
+@media (max-width: 400px) {
+  header {
+    @apply fixed w-screen h-20 top-0;
+  }
+  nav {
+    @apply z-[100000] fixed flex-col items-center backdrop-blur-lg translate-x-full px-0 py-5 left-[00vw] right-0 top-20;
+    background: steelblue;
+    background: var(--navbar-color);
+  }
+  nav li {
+    @apply w-full text-center focus:after:translate-y-0 focus:after:opacity-100 focus:after:scale-100;
+  }
+  @supports (backdrop-filter: blur(1rem)) {
+    nav {
+      background: hsl(0, 0%, 0%, 0.75);
+      background: var(--navbar-color);
+    }
+  }
+  nav li a,
+  nav .toggle-btn {
+    @apply px-[2em] py-0;
+  }
+  #root:has(div.theme-light) .mobile-nav-toggle {
+    @apply bg-[url("../../assets/list-light.svg")];
+  }
+  .mobile-nav-toggle {
+    @apply block absolute z-[999999] bg-[url("../../assets/list-dark.svg")] bg-transparent text-[white] bg-no-repeat bg-[100%] text-[white] w-8 aspect-[1] border-0 right-8 top-[25px];
+  }
+  nav[data-visible="true"] {
+    @apply visible translate-x-[0%] opacity-100 transition-opacity duration-[0.3s];
+  }
+  nav[data-visible="false"] {
+    @apply opacity-0 invisible;
+  }
+  .content > img {
+    @apply w-[300px] rounded-[50%] border-[6px] border-solid border-[gray];
+  }
+  div.cart {
+    @apply mx-0 my-5;
+  }
+}

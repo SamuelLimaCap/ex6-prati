@@ -1,0 +1,46 @@
+:root {
+  --navbar-color: #242d35;
+  --focus-color: #da7f42;
+  --text-color: white;
+  --bg-color: #242424;
+  --card-focus-color: darkgrey;
+  --success-color-btn: darkcyan;
+  --tag-color: rgb(280, 140, 255);
+
+  --navbar-text-color: rgb(280, 140, 255);
+
+  color: white;
+}
+
+#root:has(> div.theme-light) {
+  --navbar-color: #da7f42;
+  --focus-color: #422d35;
+  --text-color: black;
+  --bg-color: #f2f2f2 !important;
+  --card-focus-color: #dfae8c;
+  --success-color-btn: green;
+  --navbar-text-color: white;
+  --tag-color: #da7f42;
+
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.content {
+  padding-top: 100px;
+}
+
+#root:has(> div.theme-light) header > .navbar-icon {
+  background-image: url("./assets/sh-icon-light.jpeg");
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 400px) {
+  #root:has(div.theme-light) .mobile-nav-toggle {
+    background-image: url("./assets/list-light.svg");
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+}

@@ -1,0 +1,23 @@
+@import "tailwindcss";
+article {
+  @apply grid gap-5 grid-cols-4;
+}
+
+/* 769–1024px: 3 cols */
+@media (min-width: 769px) and (max-width: 1024px) {
+  article {
+    @apply grid-cols-3;
+  }
+}
+
+/* 481–768px: 2 cols */
+@media (min-width: 481px) and (max-width: 768px) {
+  article {
+    @apply grid-cols-2;
+  }
+}
+@media (max-width: 480px) {
+  article {
+    @apply grid-cols-1;
+  }
+}

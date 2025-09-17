@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+.card:hover .tags > span {
+  @apply border border-[color:var(--navbar-color)] text-[color:var(--navbar-color)] border-solid;
+}
+.card-desc {
+  @apply pl-5;
+}
+.card-desc > * {
+  @apply pt-[0.4rem];
+}
+.card-buttons > .add-btn[btn-style="outline"] {
+  @apply bg-transparent text-[color:var(--success-color-btn)] border-[color:var(--success-color-btn)];
+}
+.card-buttons > .add-btn[btn-style="solid"] {
+  @apply bg-[color:var(--success-color-btn)] border-[color:var(--success-color-btn)];
+}
+.card-buttons > .add-btn[btn-style="disabled"] {
+  @apply bg-[dimgray] text-[lightcyan] cursor-not-allowed border-transparent;
+}
